@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="fonts/pacifico.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="fonts/roboto.css">
+		<link rel="stylesheet" href="css/style.css">
+        <title>Fabricando Delícias - Salgados</title>
+        <style>
+            .quantidade{
+				display: block;
+			}
+        </style>
+    </head>
+    <body>
+        <div class="compra">
+			<div class="fechar" onclick="fechar()">
+				X
+			</div>
+			<div class="item">
+				<div class="cartao2">
+					<img src="img/logo1.jpeg" id="foto">
+				</div>
+				<div class="cartao">
+					<h2 class="font" id="titulo">error 404</h2>
+					<div id="parag">
+						SEM SUPORTE AO JAVASCRIPT OU MANUPULAÇÃO DO JAVASCRIPT PELO CONSOLE. 
+					</div>
+						<div class="quantidade"></div>
+				</div>
+			</div>
+		</div>
+       <nav class="navbar navbar-expand-lg navbar-dark nav">
+            <a class="navbar-brand" href="#"><img src="img/logo1.png" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="ir('contato','menu')">Contato</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" onclick="ir('sobre','menu')">Sobre</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="calcular.html" class="nav-link">Calcule seu Orçamento</a>
+                </li>
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Produtos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="doces.html">Doces</a>
+                    <a class="dropdown-item" href="salgados.html">Salgados</a>
+                    <a class="dropdown-item" href="kits.html">Kit Festa</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <nav class="tipo2" id="menu">
+            <ul>
+                <li><a href="#" onclick="animacao('salgado','menu')">Salgadinhos</a></li>
+                <li><a href="#" onclick="animacao('pizza','menu')">Mini Pizza</a></li>
+                <li><a href="#" onclick="animacao('joelho','menu')">Mini Joelho</a></li>
+                <li><a href="#" onclick="animacao('pastel','menu')">Pastelzinho</a></li>
+                <li><a href="#" onclick="animacao('miniCro','menu')">Mini Folhados</a></li>
+                <li><a href="#" onclick="animacao('empadinha','menu')">Empadinhas</a></li>
+                <li><a href="#" onclick="animacao('esfirra','menu')">Mini Esfirra</a></li>
+                <li><a href="#" onclick="animacao('torta','menu')">Torta Salgada</a></li>
+                <li><a href="#" onclick="animacao('variado','menu')">Hambúguer</a></li>
+                <li><a href="#" onclick="animacao('variado','menu')">Cachorro Quente</a></li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+            <h1 class="font destaque" id="salgado">Salgadinhos</h1>
+            <div class="row">
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/coxinha.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Coxinha</h2>
+                        <div>
+                            Massa crocante com recheio de frango.  
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>
+                        </div>  
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/bolinhaQueijo.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Bolinha de Queijo</h2>
+                        <div>   
+                            Massa crocante com recheio de queijo.                            
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>
+                        </div>  
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/queijoPresunto.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo com Presunto</h2>
+                        <div>
+                            Massa crocante com recheio de queijo com presunto.  
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>
+                        </div>  
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/queijoPresunto.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo com Alho</h2>
+                        <div>  
+                            Massa crocante com recheio de queijo com alho.
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>
+                        </div>                           
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/kibe.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Quibe com Catupiry</h2>
+                        <div>
+                            Massa crocante de quibe com recheio de catupiry.                               
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/camarao.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Camarão</h2>
+                        <div>   
+                            Massa crocante com recheio de camarão.                            
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div> 
+                <div class="col-md-3" data-value1="20" data-value2="25">
+                    <div class="cartao2">
+                        <img src="img/churros.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Churros</h2>
+                        <div>
+                                Massa crocante doce com recheio de chocolate ou doce de leite coberto com açúcar.                               
+                            <div class="preco">R$: 20,00 <span class="info">cento congelado</span></div> 
+                            <div class="preco">R$: 25,00 <span class="info">cento frito</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,true,this.id,'')">Comprar</button>
+                    </div>
+                </div>   
+            </div>
+            <h1 class="font destaque" id="pizza">Mini Pizza</h1>
+            <div class="row">
+                <div class="col-md-4" value="60">
+                    <div class="cartao2">
+                        <img src="img/pizza-queijo.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Mussarela</h2>
+                        <div>
+                            Pequenas Pizzas com massa crocante e cobertura de queijo mussarela.                               
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniPizza" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Pizza R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="60">
+                    <div class="cartao2">
+                        <img src="img/miniPizza.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Calabresa</h2>
+                        <div>                       
+                            Pequenas Pizzas com massa crocante e cobertura de calabresa.        
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniPizza" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Pizza R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="60">
+                    <div class="cartao2">
+                        <img src="img/pizza-presunto.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Presunto</h2>
+                        <div>                               
+                            Pequenas Pizzas com massa crocante e cobertura de presunto.
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniPizza" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Pizza R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque" id="joelho">Mini Joelho</h1>
+            <div class="row">
+                <div class="col-md-4" value="50">
+                        <img src="img/joelho-queijo.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo</h2>
+                        <div>
+                            Massa assada recheio de queijo.                               
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniJoelho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Joelho R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/miniJoelho.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Frango</h2>
+                        <div>                               
+                            Massa assada recheio de Frango.
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniJoelho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Joelho R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/joelho-queijoPresunto.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo com Presunto</h2>
+                        <div>
+                            Massa assada recheio de queijo com presunto.                               
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniJoelho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Joelho R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque" id="pastel">Pastelzinho de Forno</h1>
+            <div class="row">
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/pastel-carne.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Carne</h2>
+                        <div>                               
+                            Massa amanteigada de farinha de trigo com recheio de carne.
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="pastelzinho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Pastelzinho de Forno R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/pastelzinho.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Frango</h2>
+                        <div>                    
+                            Massa amanteigada de farinha de trigo com recheio de frango.           
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="pastelzinho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Pastelzinho de Forno R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/pastel-queijo.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo</h2>
+                        <div>
+                            Massa amanteigada de farinha de trigo com recheio de queijo.                                   
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="pastelzinho" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Pastelzinho de Forno R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque" id="miniCro">Mini Folhados</h1>
+            <div class="row">
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folha-queijo.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo Minas</h2>
+                        <div>    
+                            Massa folhada com recheio de queijo minas.                           
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folha-queijoPresunto.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo com Presunto</h2>
+                        <div>                          
+                            Massa folhada com recheio de queijo com presunto.     
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folha-frango.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Frango</h2>
+                        <div>   
+                            Massa folhada com recheio frango.                            
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folhado.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Romeu e Julieta</h2>
+                        <div>   
+                            Massa folhada com recheio de queijo e goiabada.                            
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folha-bacon.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Bacon com Ameixa</h2>
+                        <div>    
+                            Massa folhada com recheio de bacon com ameixa.                           
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="60">
+                    <div class="cartao2">
+                        <img src="img/folha-banana.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Banana com Canela e Creme</h2>
+                        <div>  
+                            Massa folhada com recheio de banana com canela e creme de confeiteiro.                             
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="folhado" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Folhados R$: 60,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque" id="empadinha">Empadinhas</h1>
+            <div class="row">
+                <div class="col-md-4" value="60">
+                    <div class="cartao2">
+                        <img src="img/empadinhas.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Queijo</h2>
+                        <div>   
+                            Massa amanteigada com recheio de queijo.              
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="empadinha" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Empadinhas R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="60">
+                    <div class="cartao2">
+                        <img src="img/empada-frango.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Frango</h2>
+                        <div>                               
+                            Massa amanteigada com recheio de frango.
+                            <div class="preco">R$: 60,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Empadinhas R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque" id="esfirra">Mini Esfirra</h1>
+            <div class="row">
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/miniEsfirra.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Carne</h2>
+                        <div>
+                            Massa assada com recheio de carne.                                
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniEsfirra" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Esfirra R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <div class="cartao2">
+                        <img src="img/esfirra-frango.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Frango</h2>
+                        <div>              
+                            Massa assada com recheio de frango.                 
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniEsfirra" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Esfirra R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <h1 class="font destaque "id="torta">Torta Salgada</h1>
+            <div class="row">
+                <div class="col-md-3" value="55">
+                    <div class="cartao2">
+                        <img src="img/torta10.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">10 Pessoas</h2>
+                        <div>
+                            Pão de forma com catupiry, maionese, batata palha com cobertura personalizada.
+                            <span class="info">sabores:</span> Atum ou Frango                               
+                            <div class="preco">R$: 55,00</div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="torta10" onclick="compra(this.parentElement.parentElement,1,5,1,false,this.id,'Torta Salgada: 10 pessoas R$: 55,00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="70">
+                    <div class="cartao2">
+                        <img src="img/torta20.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">20 Pessoas</h2>
+                        <div>                           
+                            Pão de forma com catupiry, maionese, batata palha com cobertura personalizada.
+                            <span class="info">sabores:</span> Atum ou Frango    
+                            <div class="preco">R$: 70,00</div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="torta20" onclick="compra(this.parentElement.parentElement,1,5,1,false,this.id,'Torta Salgada: 20 pessoas R$: 70,00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="90">
+                    <div class="cartao2">
+                        <img src="img/torta30.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">30 Pessoas</h2>
+                        <div>                            
+                            Pão de forma com catupiry, maionese, batata palha com cobertura personalizada.
+                            <span class="info">sabores:</span> Atum ou Frango   
+                            <div class="preco">R$: 90,00</div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="torta30" onclick="compra(this.parentElement.parentElement,1,5,1,false,this.id,'Torta Salgada: 30 pessoas R$: 90,00')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-3" value="120">
+                    <div class="cartao2">
+                        <img src="img/torta50.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">50 Pessoas</h2>
+                        <div>                               
+                            Pão de forma com catupiry, maionese, batata palha com cobertura personalizada.
+                            <span class="info">sabores:</span> Atum ou Frango
+                            <div class="preco">R$: 120,00</div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="bolo50" onclick="compra(this.parentElement.parentElement,1,5,1,false,this.id,'Torta Salgada: 50 pessoas R$: 120,00')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="variado">
+                <div class="col-md-4" value="50">
+                    <h1 class="font destaque">Cachorro Quente</h1>
+                    <div class="cartao2">
+                        <img src="img/cachorroQuente.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Mini Cachorro Quente</h2>
+                        <div>                   
+                            Massa fina, assada, saborosa, leve composta com catupiry e salsicha.              
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="cachorroQuente" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Cachorro Quente R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+                <div class="col-md-4" value="50">
+                    <h1 class="font destaque">Hambúrguer</h1>
+                    <div class="cartao2">
+                        <img src="img/miniHam.jpg">
+                    </div>
+                    <div class="cartao">
+                        <h2 class="font">Mini Hambúrguer</h2>
+                        <div>                               
+                            Massa fina, assada, saborosa, leve composta com hambúguer e queijo.
+                            <div class="preco">R$: 50,00 <span class="info">cento</span></div>                         
+                        </div>                           
+                        <button class="btn btn-danger" id="miniHam" onclick="compra(this.parentElement.parentElement,50,1000,50,false,this.id,'Mini Hambúrguer R$: 50,00 cento')">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subir">
+            <i class="fa fa-arrow-up"></i>
+        </div>
+		<div class="container-fluid parte3">
+			<div class="row parte4">
+				<div class="col-md-3 col-rodape">
+					<h5>Menu</h5>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="#" onclick="ir('contato','menu')">Contato</a>
+						</li>
+						<li>
+							<a href="#" onclick="ir('sobre','menu')">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="calcular.html">Calcule seu Orçamento</a>
+                        </li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-rodape">
+                    <h5>Produtos</h5>
+                    <ul>
+                        <li><a href="doces.html">Doces</a></li>
+                        <li><a href="salgados.html">Salgados</a></li>
+                        <li><a href="kits.html">Kit Festa</a></li>
+                    </ul>
+				</div>
+				<div class="col-md-3 col-rodape">
+					<h5>Contato</h5>
+					Whatsapp: +55 21 980165004
+				</div>
+				<div class="col-md-3 col-rodape">
+					<h5>Redes Socias</h5>
+					<a href="https://www.facebook.com/fabricandodelicias1/"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-envelope"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid parte2">
+			Copyright &copy; Fabricando Delícias. Todos os direitos reservados.
+		</div>
+    </body>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    </body>
+</html>
